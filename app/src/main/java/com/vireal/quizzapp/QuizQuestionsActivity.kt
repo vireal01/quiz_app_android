@@ -113,7 +113,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.submit_btn -> {
                 defaultOptionsView()
-
+                if(mSelectedOptionPosition == 0 && submitBtn?.text != "next question"){
+                    return Toast.makeText(this,"Choose an answer", Toast.LENGTH_LONG).show()
+                }
                 if(mSelectedOptionPosition == 0){
                     mCurrentPosition++
                     when{
