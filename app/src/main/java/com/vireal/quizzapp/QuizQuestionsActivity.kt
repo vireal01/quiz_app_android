@@ -138,6 +138,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                         submitBtn?.setOnClickListener{
                             val intent = Intent(this, ResultsActivity::class.java)
                             startActivity(intent)
+                            finish()
                         }
                     } else {
                         submitBtn?.text = "next question"
